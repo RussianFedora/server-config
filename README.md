@@ -19,6 +19,6 @@ Enable SSH server, add users, configure MOTD.
 
 # Hosts
 
-## Build server
+## Build server koji.russianfedora.pro
 
 Build server variables are set in `inventory/host_vars/build-server.yaml`.
