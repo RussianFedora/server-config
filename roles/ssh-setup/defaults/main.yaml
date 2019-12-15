@@ -7,8 +7,8 @@
 # Example:
 #
 # users:
-#  - name: bookwar
-#    key: https://github.com/bookwar.keys
+#  - name: someuser
+#    key: "ssh-rsa AAAAB3NzaC1ycsomeinvalidkeyusedforexamplegGzT8iTmUv"
 
 users: []
 

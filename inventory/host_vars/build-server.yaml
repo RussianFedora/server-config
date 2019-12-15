@@ -10,6 +10,8 @@ motd: |
       https://github.com/RussianFedora/server-config
 
 users:
+#  - name: someuser
+#    key: "ssh-rsa AAAAB3NzaC1ycsomeinvalidkeyusedforexamplegGzT8iTmUv"
   - name: bookwar
     key: https://github.com/bookwar.keys
   - name: vrutkovs
