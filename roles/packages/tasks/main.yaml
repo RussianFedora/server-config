@@ -1,0 +1,6 @@
+---
+
+- name: Required packages installed
+  yum:
+    name: "{{ required_packages }}"
+    state: present

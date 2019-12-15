@@ -3,3 +3,4 @@
 - hosts: rfservers
   roles:
     - ssh-setup
+    - packages
