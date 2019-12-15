@@ -1,0 +1,5 @@
+---
+
+- hosts: rfservers
+  roles:
+    - ssh-setup

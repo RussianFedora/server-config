@@ -1,0 +1,18 @@
+---
+
+# No users by default.
+#
+# To add users edit host_vars.
+#
+# Example:
+#
+# users:
+#  - name: bookwar
+#    key: https://github.com/bookwar.keys
+
+users: []
+
+# SSH Banner message
+
+motd: |
+  Hello world!

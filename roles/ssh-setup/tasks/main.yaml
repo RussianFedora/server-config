@@ -1,0 +1,20 @@
+---
+
+- name: SSH is installed
+  yum:
+    name: openssh-server
+    state: present
+
+- name: SSH service is enabled
+  service:
+    name: sshd
+    enabled: yes
+
+- name: Motd is configured
+  copy:
+    content: '{{ motd }}'
+    dest: /etc/motd
+
+- name: Users created
+  include_tasks: create_user.yaml
+  with_items: "{{ users }}"
