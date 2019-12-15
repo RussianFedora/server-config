@@ -14,3 +14,5 @@ users:
     key: https://github.com/bookwar.keys
   - name: vrutkovs
     key: https://github.com/vrutkovs.keys
+  - name: tim
+    key: https://github.com/tim77.keys
