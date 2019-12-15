@@ -1,0 +1,16 @@
+motd: |
+  Welcome to the build server of the Russian Fedora community!
+
+  You can use the server to build and test Fedora packages.
+
+  Note that server can be redeployed from scratch at any time.
+
+  Permanent changes to server configuration should be configured via Ansible playbook:
+
+      https://github.com/RussianFedora/server-config
+
+users:
+  - name: bookwar
+    key: https://github.com/bookwar.keys
+  - name: vrutkovs
+    key: https://github.com/vrutkovs.keys
