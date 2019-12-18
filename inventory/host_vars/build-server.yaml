@@ -18,6 +18,8 @@ users:
     key: https://github.com/vrutkovs.keys
   - name: tim
     key: https://github.com/tim77.keys
+  - name: xvitaly
+    key: https://github.com/xvitaly.keys
 
 required_packages:
   - mock
