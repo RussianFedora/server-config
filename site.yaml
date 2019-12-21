@@ -4,3 +4,5 @@
   roles:
     - ssh-setup
     - packages
+
+- include: site_matrix.yaml
