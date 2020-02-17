@@ -1,6 +1,6 @@
-matrix_domain: YOUR_BARE_DOMAIN_NAME_HERE
+matrix_domain: russianfedora.online
 
-matrix_ssl_lets_encrypt_support_email: YOUR_EMAIL_ADDRESS_HERE
+matrix_ssl_lets_encrypt_support_email: admin@russianfedora.online
 
 # secret key
 matrix_synapse_macaroon_secret_key: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
