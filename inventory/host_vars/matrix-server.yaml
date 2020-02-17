@@ -15,7 +15,9 @@ matrix_server_fqn_riot: "chat.{{ matrix_server_fqn_matrix }}"
 matrix_coturn_enabled: false
 
 # enable matrix-bridge-mautrix-telegram
-matrix_mautrix_telegram_enabled: true
+# TODO: set API and hash in vault and then enable it
+#matrix_mautrix_telegram_enabled: true
+matrix_mautrix_telegram_enabled: false
 
 # enable integration manager
 # TODO: create a domain for that
