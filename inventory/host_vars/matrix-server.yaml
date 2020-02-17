@@ -16,8 +16,12 @@ matrix_coturn_enabled: false
 matrix_mautrix_telegram_enabled: true
 
 # enable integration manager
-matrix_dimension_enabled: true
+# TODO: create a domain for that
+matrix_dimension_enabled: false
 
 # enable registration
 # TODO: disable once clients would start supporting SSO
 matrix_synapse_enable_registration: true
+
+# disable mxisd
+matrix_mxisd_enabled: false
