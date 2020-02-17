@@ -30,6 +30,18 @@ matrix_synapse_enable_registration: true
 # disable mxisd
 matrix_mxisd_enabled: false
 
+# don't import initial data
+run_postgres_import: false
+run_postgres_import_sqlite_db: false
+
+# Set postgres action vars to false by default
+run_postgres_upgrade: false
+run_postgres_synapse_janitor: false
+run_postgres_vacuum: false
+run_synapse_register_user: false
+run_synapse_update_user_password: false
+run_synapse_import_media_store: false
+run_self_check: false
 
 # Disable registration
 matrix_riot_web_registration_enabled: false
