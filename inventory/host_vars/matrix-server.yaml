@@ -2,11 +2,11 @@ matrix_domain: russianfedora.online
 
 matrix_ssl_lets_encrypt_support_email: admin@russianfedora.online
 
-# secret key
-matrix_synapse_macaroon_secret_key: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
+# secret key is now stored in vault
+# matrix_synapse_macaroon_secret_key: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
 
-# set random postgres password
-matrix_postgres_connection_password: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
+# random postgres password is now stored in vault
+#matrix_postgres_connection_password: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
 
 # coturn is a TURN server for voice/video calls
 matrix_coturn_enabled: false
