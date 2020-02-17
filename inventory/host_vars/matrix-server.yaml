@@ -29,3 +29,7 @@ matrix_synapse_enable_registration: true
 
 # disable mxisd
 matrix_mxisd_enabled: false
+
+
+# Disable registration
+matrix_riot_web_registration_enabled: false
