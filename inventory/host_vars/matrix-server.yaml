@@ -1,4 +1,5 @@
 matrix_domain: russianfedora.online
+matrix_server_fqn_matrix: russianfedora.online
 
 matrix_ssl_lets_encrypt_support_email: admin@russianfedora.online
 
