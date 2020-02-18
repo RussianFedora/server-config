@@ -25,7 +25,7 @@ matrix_dimension_enabled: false
 
 # enable registration
 # TODO: disable once clients would start supporting SSO
-matrix_synapse_enable_registration: true
+matrix_synapse_enable_registration: false
 
 # disable mxisd
 matrix_mxisd_enabled: false
@@ -42,6 +42,7 @@ run_synapse_register_user: false
 run_synapse_update_user_password: false
 run_synapse_import_media_store: false
 run_self_check: false
+run_stop: false
 
 # Disable registration
 matrix_riot_web_registration_enabled: false
