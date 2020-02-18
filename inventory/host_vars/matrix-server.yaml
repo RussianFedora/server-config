@@ -1,0 +1,47 @@
+matrix_domain: russianfedora.online
+matrix_server_fqn_matrix: russianfedora.online
+
+matrix_ssl_lets_encrypt_support_email: admin@russianfedora.online
+
+# secret key is now stored in vault
+# matrix_synapse_macaroon_secret_key: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
+
+# random postgres password is now stored in vault
+#matrix_postgres_connection_password: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
+
+matrix_server_fqn_riot: "chat.{{ matrix_server_fqn_matrix }}"
+
+# coturn is a TURN server for voice/video calls
+matrix_coturn_enabled: false
+
+# enable matrix-bridge-mautrix-telegram
+# TODO: set API and hash in vault and then enable it
+#matrix_mautrix_telegram_enabled: true
+matrix_mautrix_telegram_enabled: false
+
+# enable integration manager
+# TODO: create a domain for that
+matrix_dimension_enabled: false
+
+# enable registration
+# TODO: disable once clients would start supporting SSO
+matrix_synapse_enable_registration: true
+
+# disable mxisd
+matrix_mxisd_enabled: false
+
+# don't import initial data
+run_postgres_import: false
+run_postgres_import_sqlite_db: false
+
+# Set postgres action vars to false by default
+run_postgres_upgrade: false
+run_postgres_synapse_janitor: false
+run_postgres_vacuum: false
+run_synapse_register_user: false
+run_synapse_update_user_password: false
+run_synapse_import_media_store: false
+run_self_check: false
+
+# Disable registration
+matrix_riot_web_registration_enabled: false

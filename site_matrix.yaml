@@ -1,0 +1,14 @@
+---
+- hosts: matrix_servers
+  roles:
+    - matrix-base
+    - matrix-mailer
+    - matrix-postgres
+    - matrix-bridge-mautrix-telegram
+    - matrix-synapse
+    - matrix-riot-web
+    - matrix-mxisd
+    - matrix-dimension
+    - matrix-nginx-proxy
+    - matrix-coturn
+    - matrix-common-after
