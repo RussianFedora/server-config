@@ -1,0 +1,22 @@
+# External ports, set to 0 to disable
+prometheus_port: 9090
+prometheus_alertmanager_port: 0
+prometheus_blackboxexporter_port: 0
+
+# Versions
+prometheus_version: 2.16.0
+prometheus_alertmanager_version: 0.20.0
+prometheus_blackboxexporter_version: 0.16.0
+
+# Join matrix network
+prometheus_docker_network: matrix
+
+# Use fake alertmanager webhook
+prometheus_alertmanager_slack_webhook: foo
+
+# Monitor matrix
+prometheus_targets:
+- jobname: synapse
+  metrics_path: "/"
+  hosts: ["matrix-synapse"]
+  port: 9129

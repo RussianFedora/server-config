@@ -5,3 +5,7 @@ build-server	ansible_ssh_host=144.76.182.138 ansible_ssh_user=root
 [matrix_servers]
 
 matrix-server	ansible_ssh_host=144.76.182.138 ansible_ssh_user=root
+
+[monitoring_servers]
+
+monitoring-server	ansible_ssh_host=144.76.182.138 ansible_ssh_user=root
