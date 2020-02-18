@@ -2,3 +2,4 @@
 - hosts: monitoring_servers
   roles:
     - prometheus
+    - grafana

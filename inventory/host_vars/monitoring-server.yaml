@@ -7,6 +7,7 @@ prometheus_blackboxexporter_port: 0
 prometheus_version: 2.16.0
 prometheus_alertmanager_version: 0.20.0
 prometheus_blackboxexporter_version: 0.16.0
+grafana_docker_image_version: 6.6.1
 
 # Join matrix network
 prometheus_docker_network: matrix
@@ -20,3 +21,12 @@ prometheus_targets:
   metrics_path: "/"
   hosts: ["matrix-synapse"]
   port: 9129
+
+# Grafana settings
+grafana_path: "/matrix/grafana"
+grafana_docker_run_options: "--volume={{grafana_data_path}}:/var/lib/grafana --volume={{grafana_dashboards_path}}:/dashboards"
+grafana_config_env:
+- GF_USERS_ALLOW_SIGN_UP: false
+- GF_AUTH_ANONYMOUS_ENABLED: true
+
+#grafana_admin_password is stored in vault
