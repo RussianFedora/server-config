@@ -4,3 +4,6 @@
 [submodule "misc/prometheus"]
 	path = misc/prometheus
 	url = https://github.com/ome/ansible-role-prometheus
+[submodule "misc/grafana"]
+	path = misc/grafana
+	url = https://github.com/escalate/ansible-grafana-docker
