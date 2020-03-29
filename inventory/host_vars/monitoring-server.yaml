@@ -21,6 +21,10 @@ prometheus_targets:
   metrics_path: "/"
   hosts: ["matrix-synapse"]
   port: 9129
+- jobname: mautrix-telegram
+  metrics_path: "/"
+  hosts: ["matrix-mautrix-telegram"]
+  port: 8000
 
 # Grafana settings
 grafana_path: "/matrix/grafana"
