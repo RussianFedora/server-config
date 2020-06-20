@@ -38,4 +38,3 @@ cockpit_packages:
   - cockpit-selinux
   - cockpit-storaged
   - cockpit-docker
-  - cockpit-podman
