@@ -6,4 +6,4 @@
     - cockpit
     - packages
 
-- include: site_matrix.yaml
+- include_playbook: site_matrix.yaml
