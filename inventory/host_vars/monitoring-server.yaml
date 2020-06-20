@@ -1,5 +1,5 @@
 # External ports, set to 0 to disable
-prometheus_port: 9090
+prometheus_port: 0
 prometheus_alertmanager_port: 0
 prometheus_blackboxexporter_port: 0
 
