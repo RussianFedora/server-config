@@ -30,5 +30,12 @@ required_packages:
   - fedpkg
   - koji
 
-
-
+# Default cockpit packages + docker
+cockpit_packages:
+  - cockpit
+  - cockpit-networkmanager
+  - cockpit-packagekit
+  - cockpit-selinux
+  - cockpit-storaged
+  - cockpit-docker
+  - cockpit-podman

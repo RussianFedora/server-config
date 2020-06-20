@@ -3,6 +3,7 @@
 - hosts: rfservers
   roles:
     - ssh-setup
+    - cockpit
     - packages
 
 - include: site_matrix.yaml
