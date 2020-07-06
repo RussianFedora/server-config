@@ -2,7 +2,9 @@
 {
   "schema": 7,
   "tgkey": "{{antispam_bot_token}}",
-  "admins": [],
+  "admins": [
+    170389127
+  ],
   "restent": ["url", "text_link", "mention"],
   "stopwords": ["SEO", "Deleted"],
   "bantime": 1209600,
