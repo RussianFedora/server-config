@@ -5,5 +5,3 @@
     - ssh-setup
     - cockpit
     - packages
-
-- include_playbook: site_matrix.yaml

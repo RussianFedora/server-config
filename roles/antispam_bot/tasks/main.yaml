@@ -1,0 +1,23 @@
+---
+
+- name: Create ecasbot config dir
+  file:
+    path: /etc/ecasbot
+    state: directory
+
+- name: Prepare ecasbot config
+  template:
+    src: templates/ecasbot.json
+    dest: /etc/ecasbot/ecasbot.json
+
+- name: Install systemd unit file
+  template:
+    src: templates/ecasbot.service
+    dest: /etc/systemd/system/ecasbot.service
+
+- name: Start and enable ecasbot
+  systemd:
+    name: ecasbot
+    state: started
+    enabled: true
+    daemon_reload: true
