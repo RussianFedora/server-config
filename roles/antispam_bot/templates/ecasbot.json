@@ -3,7 +3,8 @@
   "schema": 7,
   "tgkey": "{{antispam_bot_token}}",
   "admins": [
-    170389127
+    170389127,
+    88946272
   ],
   "restent": ["url", "text_link", "mention"],
   "stopwords": ["SEO", "Deleted"],
