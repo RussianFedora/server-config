@@ -13,7 +13,7 @@
 - name: Prepare flatmanager config
   template:
     src: templates/flatmanager.json
-    dest: /etc/flatmanager/flatmanager.json
+    dest: "{{ flatmanager_mount }}/config.json"
 
 - name: Install flatmanager systemd unit file
   template:

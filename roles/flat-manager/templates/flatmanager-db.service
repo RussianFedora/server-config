@@ -16,7 +16,6 @@ ExecStart=/usr/bin/env docker run --rm \
                         --env=POSTGRES_USER={{flatmanager_db_user}} \
                         --env=POSTGRES_PASSWORD={{flatmanager_db_password}} \
                         --env=POSTGRES_DB={{flatmanager_db_name}} \
-                        --publish=5432:5432 \
                         --name=flatmanager-postgres \
                         postgres:12
 

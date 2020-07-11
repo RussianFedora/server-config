@@ -16,8 +16,6 @@ ExecStart=/usr/bin/env docker run --rm --name flat-manager \
                         --network=flatmanager \
                         --read-only \
                         -p 8080:8080 \
-                        --links flat-manager-db \
-                        -v /etc/flat-manager/flat-manager.json:/etc/flat-manager/flat-manager.json:ro \
                         -v {{flatmanager_mount}}:{{flatmanager_mount}} \
                         -w {{flatmanager_mount}} \
                         {{ flatmanager_bot_image }}
