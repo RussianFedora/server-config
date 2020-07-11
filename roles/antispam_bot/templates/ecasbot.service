@@ -1,0 +1,26 @@
+[Unit]
+Description=EC AntiSpam bot
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStartPre=-/usr/bin/env docker kill ecasbot
+ExecStartPre=-/usr/bin/env docker rm ecasbot
+ExecStartPre=/usr/bin/env docker pull quay.io/vrutkovs/ecasbot:latest
+
+ExecStart=/usr/bin/env docker run --rm --name ecasbot \
+                        --log-driver=none \
+                        --user=991:991 \
+                        --cap-drop=ALL \
+                        --read-only \
+                        -v /etc/ecasbot/ecasbot.json:/etc/ecasbot/ecasbot.json:ro \
+                        {{ antispam_bot_image }}
+
+ExecStop=-/usr/bin/env docker kill ecasbot
+ExecStop=-/usr/bin/env docker rm ecasbot
+Restart=always
+SyslogIdentifier=ecasbot
+
+[Install]
+WantedBy=multi-user.target
