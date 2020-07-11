@@ -36,6 +36,7 @@
             }
         }
     },
+    "host": "0.0.0.0",
     "port": 8080,
     "delay-update-secs": 10,
     "database-url": "postgres://{{flatmanager_db_user}}:{{flatmanager_db_password}}@flatmanager-postgres/{{flatmanager_db_name}}",
