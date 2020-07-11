@@ -1,0 +1,9 @@
+---
+flatmanager_bot_image: "quay.io/vrutkovs/flat-manager:master"
+flatmanager_mount: "/srv/flatmanager"
+flatmanager_db: "/srv/flatmanager-db"
+
+flatmanager_db_user: "admin"
+# This is safe to expose publicly since postgres is confined in a separate network
+flatmanager_db_password: "sikret"
+flatmanager_db_name: "flatmanager"

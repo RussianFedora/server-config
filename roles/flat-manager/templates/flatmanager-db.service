@@ -1,0 +1,29 @@
+[Unit]
+Description=Flat Manager DB
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+ExecStartPre=-/usr/bin/env docker kill flat-manager-db
+ExecStartPre=-/usr/bin/env docker rm flat-manager-db
+ExecStartPre=/usr/bin/env docker pull postgres:12
+
+ExecStart=/usr/bin/env docker run --rm \
+                        --log-driver=none \
+                        --network=flatmanager \
+                        --volume={{flatmanager_db}}:/var/lib/postgresql/data:z \
+                        --env=POSTGRES_USER={{flatmanager_db_user}} \
+                        --env=POSTGRES_PASSWORD={{flatmanager_db_password}} \
+                        --env=POSTGRES_DB={{flatmanager_db_name}} \
+                        --publish=5432:5432 \
+                        --name=flatmanager-postgres \
+                        postgres:12
+
+ExecStop=-/usr/bin/env docker kill flat-manager-db
+ExecStop=-/usr/bin/env docker rm flat-manager-db
+Restart=always
+SyslogIdentifier=flat-manager-db
+
+[Install]
+WantedBy=multi-user.target
