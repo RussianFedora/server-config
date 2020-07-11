@@ -4,6 +4,15 @@
   file:
     path: "{{ flatmanager_mount }}"
     state: directory
+    owner: 1000
+    group: 1000
+
+- name: Create flatmanager repo
+  file:
+    path: "{{ flatmanager_mount }}/repo"
+    state: directory
+    owner: 1000
+    group: 1000
 
 - name: Create flatmanager config dir
   file:

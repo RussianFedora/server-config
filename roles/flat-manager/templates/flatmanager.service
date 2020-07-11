@@ -12,12 +12,12 @@ ExecStartPre=/usr/bin/env docker pull {{ flatmanager_bot_image }}
 
 ExecStart=/usr/bin/env docker run --rm --name flat-manager \
                         --log-driver=none \
-                        --cap-drop=ALL \
                         --network=flatmanager \
-                        --read-only \
+                        --user 1000 \
                         -p 8080:8080 \
-                        -v {{flatmanager_mount}}:{{flatmanager_mount}} \
                         -w {{flatmanager_mount}} \
+                        -v {{flatmanager_mount}}:{{flatmanager_mount}}:z \
+                        -v {{flatmanager_mount}}/build:/var/lib/flat-manager:z \
                         {{ flatmanager_bot_image }}
 
 ExecStop=-/usr/bin/env docker kill flat-manager
