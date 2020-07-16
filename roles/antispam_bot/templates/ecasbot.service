@@ -14,7 +14,9 @@ ExecStart=/usr/bin/env docker run --rm --name ecasbot \
                         --user=991:991 \
                         --cap-drop=ALL \
                         --read-only \
-                        -v /etc/ecasbot/ecasbot.json:/etc/ecasbot/ecasbot.json:ro \
+                        --env-file=/etc/ecasbot/ecasbot-env.conf \
+                        -v /etc/ecasbot/ecasbot.json:/etc/ecasbot/ecasbot.json:rw \
+                        -v /var/log/ecasbot:/var/log/ecasbot:rw \
                         {{ antispam_bot_image }}
 
 ExecStop=-/usr/bin/env docker kill ecasbot
