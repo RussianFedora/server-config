@@ -40,7 +40,7 @@
 - name: Install logrotate config file
   template:
     src: templates/ecasbot.logrotate
-    state: /etc/logrotate.d/ecasbot
+    dest: /etc/logrotate.d/ecasbot
 
 - name: Start and enable ecasbot
   systemd:
