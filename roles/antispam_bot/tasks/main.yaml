@@ -4,16 +4,43 @@
   file:
     path: /etc/ecasbot
     state: directory
+    owner: root
+    group: matrix
+    mode: 0770
+
+- name: Create ecasbot logs dir
+  file:
+    path: /var/log/ecasbot
+    state: directory
+    owner: root
+    group: matrix
+    mode: 0775
 
 - name: Prepare ecasbot config
   template:
     src: templates/ecasbot.json
     dest: /etc/ecasbot/ecasbot.json
+    owner: root
+    group: matrix
+    mode: 0660
+
+- name: Install environment file
+  template:
+    src: templates/ecasbot-env.conf
+    dest: /etc/ecasbot/ecasbot-env.conf
+    owner: root
+    group: root
+    mode: 0640
 
 - name: Install systemd unit file
   template:
     src: templates/ecasbot.service
     dest: /etc/systemd/system/ecasbot.service
+
+- name: Install logrotate config file
+  template:
+    src: templates/ecasbot.logrotate
+    state: /etc/logrotate.d/ecasbot
 
 - name: Start and enable ecasbot
   systemd:
