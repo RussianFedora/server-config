@@ -20,6 +20,8 @@ users:
     key: https://github.com/tim77.keys
   - name: xvitaly
     key: https://github.com/xvitaly.keys
+  - name: gasinvein
+    key: https://github.com/gasinvein.keys
 
 required_packages:
   - mock

@@ -1,0 +1,26 @@
+{
+    "repos": {
+        "stable": {
+            "path": "repo",
+            "collection-id": "online.russianfedora.Stable",
+            "suggested-repo-name": "russianfedora",
+            "runtime-repo-url": "https://dl.flathub.org/repo/flathub.flatpakrepo",
+            "gpg-key": "{{flatmanager_gpg_key}}",
+            "base-url": "https://dl.russianfedora.online/repo",
+            "subsets": {
+                "all": {
+                    "collection-id": "online.russianfedora.Stable",
+                    "base-url": "https://dl.russianfedora.online/repo"
+                }
+            }
+        }
+    },
+    "host": "0.0.0.0",
+    "port": 8080,
+    "delay-update-secs": 10,
+    "database-url": "postgres://{{flatmanager_db_user}}:{{flatmanager_db_password}}@flatmanager-postgres/{{flatmanager_db_name}}",
+    "build-repo-base": "build-repo",
+    "build-gpg-key": "{{flatmanager_buildgpg_key}}",
+    "gpg-homedir": null,
+    "secret": "{{flatmanager_secret}}"
+}

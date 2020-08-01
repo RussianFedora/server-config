@@ -1,0 +1,58 @@
+---
+
+- name: Create flatmanager working dir
+  file:
+    path: "{{ flatmanager_mount }}"
+    state: directory
+    owner: 1000
+    group: 1000
+
+- name: Create flatmanager repo
+  file:
+    path: "{{ flatmanager_mount }}/repo"
+    state: directory
+    owner: 1000
+    group: 1000
+
+- name: Create flatmanager config dir
+  file:
+    path: /etc/flatmanager
+    state: directory
+
+- name: Prepare flatmanager config
+  template:
+    src: templates/flatmanager.json
+    dest: "{{ flatmanager_mount }}/config.json"
+
+- name: Install flatmanager systemd unit file
+  template:
+    src: templates/flatmanager.service
+    dest: /etc/systemd/system/flatmanager.service
+
+- name: Install flatmanager-db systemd unit file
+  template:
+    src: templates/flatmanager-db.service
+    dest: /etc/systemd/system/flatmanager-db.service
+
+- name: Create flatmanager DB dir
+  file:
+    path: "{{ flatmanager_db }}"
+    state: directory
+
+- name: Create flatmanager docker network
+  docker_network:
+    name: flatmanager
+
+- name: Start and enable flatmanager-db
+  systemd:
+    name: flatmanager-db
+    state: started
+    enabled: true
+    daemon_reload: true
+
+- name: Start and enable flatmanager
+  systemd:
+    name: flatmanager
+    state: started
+    enabled: true
+    daemon_reload: true

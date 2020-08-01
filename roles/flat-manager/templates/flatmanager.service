@@ -1,0 +1,29 @@
+[Unit]
+Description=Flat Manager
+Requires=docker.service
+After=docker.service
+Wants=flatmanager-db.service
+
+[Service]
+Restart=always
+ExecStartPre=-/usr/bin/env docker kill flat-manager
+ExecStartPre=-/usr/bin/env docker rm flat-manager
+ExecStartPre=/usr/bin/env docker pull {{ flatmanager_bot_image }}
+
+ExecStart=/usr/bin/env docker run --rm --name flat-manager \
+                        --log-driver=none \
+                        --network=flatmanager \
+                        --user 1000 \
+                        -p 8080:8080 \
+                        -w {{flatmanager_mount}} \
+                        -v {{flatmanager_mount}}:{{flatmanager_mount}}:z \
+                        -v {{flatmanager_mount}}/build:/var/lib/flat-manager:z \
+                        {{ flatmanager_bot_image }}
+
+ExecStop=-/usr/bin/env docker kill flat-manager
+ExecStop=-/usr/bin/env docker rm flat-manager
+Restart=always
+SyslogIdentifier=flat-manager
+
+[Install]
+WantedBy=multi-user.target

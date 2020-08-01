@@ -76,6 +76,11 @@ matrix_synapse_container_metrics_api_host_bind_port: "127.0.0.1:9129"
 matrix_vars_yml_snapshotting_enabled: false
 
 # Update a list of domains to obtain certificates for
+request_certs_for_additional_domains:
+- "grafana.{{ matrix_domain }}"
+- "flatpak.{{ matrix_domain }}"
+- "dl.{{ matrix_domain }}"
+
 matrix_ssl_domains_to_obtain_certificates_for: |
   {{
     ([matrix_server_fqn_matrix])
@@ -90,5 +95,10 @@ matrix_ssl_domains_to_obtain_certificates_for: |
     +
     ([matrix_domain] if matrix_nginx_proxy_base_domain_serving_enabled else [])
     +
-    (["grafana."+matrix_domain])
+    (request_certs_for_additional_domains)
   }}
+
+matrix_nginx_proxy_container_additional_volumes:
+- src: /srv/flatmanager/repo
+  dst: /srv/flatmanager/repo
+  options: Z
