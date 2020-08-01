@@ -8,6 +8,7 @@
     - matrix-synapse
     - matrix-client-element
     - matrix-dimension
+    - custom-proxy
     - matrix-nginx-proxy
     - matrix-coturn
     - matrix-common-after

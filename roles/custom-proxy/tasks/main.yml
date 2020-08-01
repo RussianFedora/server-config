@@ -1,0 +1,5 @@
+- name: Ensure nginx-proxy configuration for Grafana domain exists
+  template:
+    src: "{{ role_path }}/files/grafana.conf"
+    dest: "{{ matrix_nginx_proxy_confd_path }}/grafana.conf"
+    mode: 0644
