@@ -6,11 +6,11 @@
             "suggested-repo-name": "russianfedora",
             "runtime-repo-url": "https://dl.flathub.org/repo/flathub.flatpakrepo",
             "gpg-key": "{{flatmanager_gpg_key}}",
-            "base-url": "http://dl.russianfedora.online/",
+            "base-url": "https://dl.russianfedora.online/repo",
             "subsets": {
                 "all": {
                     "collection-id": "online.russianfedora.Stable",
-                    "base-url": "http://dl.russianfedora.online/"
+                    "base-url": "https://dl.russianfedora.online/repo"
                 }
             }
         }
