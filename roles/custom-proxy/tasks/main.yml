@@ -3,3 +3,19 @@
     src: "{{ role_path }}/files/grafana.conf"
     dest: "{{ matrix_nginx_proxy_confd_path }}/grafana.conf"
     mode: 0644
+  tags:
+    - setup-nginx-proxy
+- name: Ensure nginx-proxy configuration for flatmanager domain exists
+  template:
+    src: "{{ role_path }}/files/flatpak.conf"
+    dest: "{{ matrix_nginx_proxy_confd_path }}/flatpak.conf"
+    mode: 0644
+  tags:
+    - setup-nginx-proxy
+- name: Ensure nginx-proxy configuration for download domain exists
+  template:
+    src: "{{ role_path }}/files/dl.conf"
+    dest: "{{ matrix_nginx_proxy_confd_path }}/dl.conf"
+    mode: 0644
+  tags:
+    - setup-nginx-proxy
