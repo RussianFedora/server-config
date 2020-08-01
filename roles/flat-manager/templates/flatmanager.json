@@ -2,42 +2,21 @@
     "repos": {
         "stable": {
             "path": "repo",
-            "collection-id": "org.test.Stable",
-            "suggested-repo-name": "testrepo",
+            "collection-id": "online.russianfedora.Stable",
+            "suggested-repo-name": "russianfedora",
             "runtime-repo-url": "https://dl.flathub.org/repo/flathub.flatpakrepo",
             "gpg-key": "{{flatmanager_gpg_key}}",
-            "base-url": null,
+            "base-url": "http://dl.russianfedora.online/",
             "subsets": {
                 "all": {
-                    "collection-id": "org.test.Stable",
-                    "base-url": null
-                },
-                "free": {
-                    "collection-id": "org.test.Stable.test",
-                    "base-url": null
-                }
-            }
-        },
-        "beta": {
-            "path": "beta-repo",
-            "collection-id": "org.test.Beta",
-            "suggested-repo-name": "testrepo-beta",
-            "runtime-repo-url": "https://dl.flathub.org/repo/flathub.flatpakrepo",
-            "gpg-key": "{{flatmanager_gpg_key}}",
-            "subsets": {
-                "all": {
-                    "collection-id": "org.test.Beta",
-                    "base-url": null
-                },
-                "free": {
-                    "collection-id": "org.test.Beta.test",
-                    "base-url": null
+                    "collection-id": "online.russianfedora.Stable",
+                    "base-url": "http://dl.russianfedora.online/"
                 }
             }
         }
     },
-    "host": "dl.russianfedora.online",
-    "port": 443,
+    "host": "0.0.0.0",
+    "port": 8080,
     "delay-update-secs": 10,
     "database-url": "postgres://{{flatmanager_db_user}}:{{flatmanager_db_password}}@flatmanager-postgres/{{flatmanager_db_name}}",
     "build-repo-base": "build-repo",
