@@ -7,3 +7,6 @@ flatmanager_db_user: "admin"
 # This is safe to expose publicly since postgres is confined in a separate network
 flatmanager_db_password: "sikret"
 flatmanager_db_name: "flatmanager"
+
+flatmanager_buildgpg_key: "2B7075F590E963280DC7A6FE9FCA32AF51DC718B"
+flatmanager_gpg_key: "C67FECBE8D4B653BF9362882B8C8E40CC4186539"
