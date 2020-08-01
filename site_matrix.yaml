@@ -6,7 +6,7 @@
     - matrix-postgres
     - matrix-bridge-mautrix-telegram
     - matrix-synapse
-    - matrix-riot-web
+    - matrix-client-element
     - matrix-dimension
     - matrix-nginx-proxy
     - matrix-coturn
