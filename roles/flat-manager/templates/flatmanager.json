@@ -22,5 +22,6 @@
     "build-repo-base": "build-repo",
     "build-gpg-key": "{{flatmanager_buildgpg_key}}",
     "gpg-homedir": null,
+    "base-url": "https://flatpak.russianfedora.online",
     "secret": "{{flatmanager_secret}}"
 }
