@@ -12,8 +12,8 @@
   file:
     path: /var/log/ecasbot
     state: directory
-    owner: matrix
-    group: root
+    owner: root
+    group: matrix
     mode: 0775
 
 - name: Prepare ecasbot config
@@ -36,11 +36,6 @@
   template:
     src: templates/ecasbot.service
     dest: /etc/systemd/system/ecasbot.service
-
-- name: Install logrotate config file
-  template:
-    src: templates/ecasbot.logrotate
-    dest: /etc/logrotate.d/ecasbot
 
 - name: Start and enable ecasbot
   systemd:
