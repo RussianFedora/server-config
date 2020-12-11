@@ -3,6 +3,9 @@ prometheus_port: 0
 prometheus_alertmanager_port: 0
 prometheus_blackboxexporter_port: 0
 
+# Bind to 0.0.0.0
+prometheus_additional_command_args: '--web.listen-address=0.0.0.0:9090'
+
 # Versions
 prometheus_version: 2.19.1
 prometheus_alertmanager_version: 0.20.0
