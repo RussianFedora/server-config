@@ -28,7 +28,7 @@ prometheus_targets:
 
 # Grafana settings
 grafana_path: "/matrix/grafana"
-grafana_docker_run_options: "--volume={{grafana_data_path}}:/var/lib/grafana --volume={{grafana_dashboards_path}}:/dashboards"
+grafana_docker_run_options: "--volume={{grafana_data_path}}:/var/lib/grafana --volume={{grafana_dashboards_path}}:/dashboards --network {{prometheus_docker_network}}"
 grafana_config_env:
 - GF_USERS_ALLOW_SIGN_UP: false
 - GF_AUTH_ANONYMOUS_ENABLED: true
