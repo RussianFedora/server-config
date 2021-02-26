@@ -47,7 +47,7 @@ matrix_dimension_enabled: false
 matrix_synapse_enable_registration: false
 
 # disable mxisd
-matrix_mxisd_enabled: false
+matrix_ma1sd_enabled: false
 
 # don't import initial data
 run_postgres_import: false
