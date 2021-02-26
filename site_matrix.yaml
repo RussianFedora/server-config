@@ -4,8 +4,10 @@
     - matrix-base
     - matrix-mailer
     - matrix-postgres
+    - matrix-redis
     - matrix-bridge-mautrix-telegram
     - matrix-synapse
+    - matrix-synapse-admin
     - matrix-client-element
     - matrix-dimension
     - custom-proxy
