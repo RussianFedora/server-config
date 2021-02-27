@@ -1,5 +1,7 @@
 ---
 - hosts: matrix_servers
+  vars_files:
+    - misc/matrix/roles/matrix-synapse/vars/workers.yml
   roles:
     - matrix-base
     - matrix-mailer
