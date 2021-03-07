@@ -71,3 +71,6 @@ matrix_synapse_metrics_enabled: true
 matrix_nginx_proxy_proxy_synapse_metrics: false
 matrix_synapse_metrics_port: 9129
 matrix_synapse_container_metrics_api_host_bind_port: "127.0.0.1:9129"
+
+# random postgres password is now stored in vault
+#matrix_grafana_default_admin_password: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT

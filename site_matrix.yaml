@@ -10,6 +10,9 @@
     - matrix-bridge-mautrix-telegram
     - matrix-synapse
     - matrix-synapse-admin
+    - matrix-prometheus-node-exporter
+    - matrix-prometheus
+    - matrix-grafana
     - matrix-client-element
     - matrix-dimension
     - custom-proxy

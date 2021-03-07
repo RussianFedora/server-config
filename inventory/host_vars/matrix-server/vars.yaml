@@ -80,9 +80,9 @@ matrix_vars_yml_snapshotting_enabled: false
 
 # Update a list of domains to obtain certificates for
 request_certs_for_additional_domains:
-- "grafana.{{ matrix_domain }}"
 - "flatpak.{{ matrix_domain }}"
 - "dl.{{ matrix_domain }}"
+- "{{ matrix_server_fqn_grafana }}"
 
 matrix_ssl_domains_to_obtain_certificates_for: |
   {{
@@ -113,3 +113,10 @@ matrix_postgres_process_extra_arguments: [
   "-c 'max_connections=200'"
 ]
 matrix_synapse_log_level: "INFO"
+
+# Run prometheus and grafana to display metrics
+matrix_prometheus_enabled: true
+matrix_prometheus_node_exporter_enabled: true
+matrix_grafana_enabled: true
+matrix_grafana_anonymous_access: true
+matrix_grafana_default_admin_user: admin
