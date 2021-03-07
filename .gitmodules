@@ -1,9 +1,6 @@
 [submodule "misc/matrix"]
 	path = misc/matrix
 	url = https://github.com/spantaleev/matrix-docker-ansible-deploy
-[submodule "misc/grafana"]
-	path = misc/grafana
-	url = https://github.com/escalate/ansible-grafana-docker
 [submodule "misc/cockpit"]
 	path = misc/cockpit
 	url = https://github.com/linux-system-roles/cockpit
