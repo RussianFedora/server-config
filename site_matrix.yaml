@@ -4,6 +4,7 @@
     - misc/matrix/roles/matrix-synapse/vars/workers.yml
   roles:
     - matrix-base
+    - matrix-ma1sd
     - matrix-mailer
     - matrix-postgres
     - matrix-redis
