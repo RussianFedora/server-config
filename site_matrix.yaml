@@ -10,6 +10,7 @@
     - matrix-redis
     - matrix-bridge-mautrix-telegram
     - matrix-synapse
+    - matrix-dendrite
     - matrix-synapse-admin
     - matrix-prometheus-node-exporter
     - matrix-prometheus
