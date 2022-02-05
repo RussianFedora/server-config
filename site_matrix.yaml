@@ -9,6 +9,7 @@
     - matrix-postgres
     - matrix-redis
     - matrix-bridge-mautrix-telegram
+    - matrix-bridge-hookshot
     - matrix-synapse
     - matrix-dendrite
     - matrix-synapse-admin
