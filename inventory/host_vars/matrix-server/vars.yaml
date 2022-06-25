@@ -71,7 +71,7 @@ matrix_client_element_registration_enabled: false
 
 # Enable metrics
 matrix_synapse_metrics_enabled: true
-matrix_nginx_proxy_proxy_synapse_metrics: false
+matrix_synapse_metrics_proxying_enabled: true
 matrix_synapse_metrics_port: 9129
 matrix_synapse_container_metrics_api_host_bind_port: "127.0.0.1:9129"
 
