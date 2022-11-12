@@ -76,7 +76,7 @@ matrix_synapse_metrics_port: 9129
 matrix_synapse_container_metrics_api_host_bind_port: "127.0.0.1:9129"
 
 # Disable vars snapshotting - we're using git for that
-matrix_vars_yml_snapshotting_enabled: false
+devture_playbook_state_preserver_vars_preservation_enabled: false
 
 # Update a list of domains to obtain certificates for
 request_certs_for_additional_domains:
