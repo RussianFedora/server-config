@@ -117,6 +117,6 @@ matrix_synapse_log_level: "INFO"
 # Run prometheus and grafana to display metrics
 matrix_prometheus_enabled: true
 prometheus_node_exporter_enabled: true
-matrix_grafana_enabled: true
-matrix_grafana_anonymous_access: true
-matrix_grafana_default_admin_user: admin
+grafana_enabled: true
+grafana_anonymous_access: true
+grafana_default_admin_user: admin
