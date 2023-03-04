@@ -120,3 +120,4 @@ prometheus_node_exporter_enabled: true
 grafana_enabled: true
 grafana_anonymous_access: true
 grafana_default_admin_user: admin
+matrix_playbook_reverse_proxy_type: playbook-managed-nginx
