@@ -77,3 +77,7 @@ matrix_synapse_container_metrics_api_host_bind_port: "127.0.0.1:9129"
 
 # random postgres password is now stored in vault
 #matrix_grafana_default_admin_password: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
+
+# Enable synapse auto compression
+matrix_synapse_auto_compressor_enabled: true
+
