@@ -115,7 +115,7 @@ devture_postgres_process_extra_arguments: [
 matrix_synapse_log_level: "INFO"
 
 # Run prometheus and grafana to display metrics
-matrix_prometheus_enabled: true
+prometheus_enabled: true
 prometheus_node_exporter_enabled: true
 grafana_enabled: true
 grafana_anonymous_access: true
