@@ -1,7 +1,7 @@
 matrix_domain: russianfedora.online
 matrix_server_fqn_matrix: russianfedora.online
 
-matrix_ssl_lets_encrypt_support_email: admin@russianfedora.online
+devture_traefik_config_certificatesResolvers_acme_email: admin@russianfedora.online
 
 # secret key is now stored in vault
 # matrix_synapse_macaroon_secret_key: SOME_RANDOM_STRING_WHICH_IS_IN_VAULT
@@ -80,4 +80,3 @@ matrix_synapse_container_metrics_api_host_bind_port: "127.0.0.1:9129"
 
 # Enable synapse auto compression
 matrix_synapse_auto_compressor_enabled: true
-
