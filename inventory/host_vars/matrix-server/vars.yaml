@@ -86,7 +86,7 @@ request_certs_for_additional_domains:
 
 matrix_synapse_workers_enabled: true
 redis_enabled: true
-matrix_synapse_workers_preset: "one-of-each"
+matrix_synapse_workers_preset: "specialized-workers"
 devture_postgres_process_extra_arguments: [
   "-c 'max_connections=200'"
 ]
